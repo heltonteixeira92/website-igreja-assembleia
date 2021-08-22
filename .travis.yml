@@ -7,4 +7,7 @@ install:
 
 script:
   - flake8
-  - pytest
+  - pytest --cov=assembleiaproject
+
+after_success:
+  - codecov
