@@ -5,17 +5,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %} Casa de Simeão {% endblock %}</title>
+    <title>{% block title %} Assembleia {% endblock %}</title>
     <meta name="description" content="Igreja assembleia">
-    <meta name="author" content="Time 12!">
+    <meta name="author" content="Helton Teixeira">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'base/img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'base/img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'base/img/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'base/img/site.webmanifest' %}">
 
     <link href="{% static 'base/css/style.css' %}" rel="stylesheet">
     <script src="{% static 'base/js/jquery.min.js' %}"></script>
     <script src="{% static 'base/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'base/js/scripts.js' %}"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Optional JavaScript -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -24,32 +27,58 @@
 <body>
 
 
-          <nav class="navbar navbar-expand-lg navbar-dark shadow-sm p-3 nav-style">
+<header class="p-3 nav-style text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 ml-lg-0 text-white text-decoration-none">
+                <img class="navbar-brand logo"  src="{% static 'base/img/logo-nav.png' %}">
+            </a>
 
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <a href="{% url 'base:home' %}">
-                <img class="navbar-brand logo"  src="{% static 'base/img/logo_casa_de_simeao.png' %}">
-              </a>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                     <a class="nav-link" href=""><h5> Quem somos </h5><span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href=""><h5> Atividades </h5><span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href=""><h5>Seja voluntário</h5></a>
-                  </li>
-                   <li class="nav-item">
-                       <a class="nav-link" href="#"><h5>Empresas parceiras</h5></a>
-                  </li>
-                </ul>
-                  <a class="ml-auto botao" href="">Doe Agora</a>
-              </div>
-          </nav>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link text-secondary">Home</a></li>
+                <li><a href="#" class="nav-link  text-white">Galeria</a></li>
+                <li><a href="#" class="nav-link  text-white">Blog</a></li>
+                <li><a href="#" class="nav-link  text-white">Sobre nós</a></li>
+            </ul>
+
+<!--            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">-->
+<!--                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">-->
+<!--            </form>-->
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+<!--                <button type="button" class="btn btn-warning">Sign-up</button>-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--          <nav class="navbar navbar-expand-lg navbar-dark shadow-sm p-1 nav-style">-->
+
+<!--              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--              </button>-->
+<!--              <a href="{% url 'base:home' %}">-->
+<!--                <img class="navbar-brand logo"  src="{% static 'base/img/logo-nav.png' %}">-->
+<!--              </a>-->
+<!--              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+<!--                <ul class="navbar-nav ml-auto">-->
+<!--                    <li class="nav-item active">-->
+<!--                     <a class="nav-link" href=""><h5> Quem somos </h5><span class="sr-only">(current)</span></a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                     <a class="nav-link" href=""><h5> Atividades </h5><span class="sr-only">(current)</span></a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                      <a class="nav-link" href=""><h5>Seja voluntário</h5></a>-->
+<!--                  </li>-->
+<!--&lt;!&ndash;                   <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                       <a class="nav-link" href="#"><h5>Empresas parceiras</h5></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </li>&ndash;&gt;-->
+<!--                </ul>-->
+<!--&lt;!&ndash;                  <a class="ml-auto botao" href="">Doe Agora</a>&ndash;&gt;-->
+<!--              </div>-->
+<!--          </nav>-->
 
 
   {% block content %}
@@ -65,36 +94,39 @@
 									<address>
 										Telefone: <a href="tel:+551132282064" class="text-light">(11) 3228-2064</a> <br>
                                         Telefone: <a href="tel:+551132282064" class="text-light">(11) 3311-7864</a> <br>
-
-                                        Rua Assunção nº 480 Brás
+                                        <br>
+                                        <p>Sede: Rua Ateneu nº 165, Montes claros - MG </p>
+                                        <p>Setor 2: Av Dois, nº 401, Recanto das águas - MG</p>
+                                        <p>Setor 3: Rua Lago da vitória nº 26b, <br>Jardim Aurélio, Sâo Paulo - SP</p>
 									</address>
 								</div>
                                 <div class="col">
                                     <h5>Redes socias</h5>
-                                    <img src="{% static 'base/img/intagram.png' %}" height="20" width="20" alt="icone instagram" /> casadesimeao
+                                    <img src="{% static 'base/img/intagram.png' %}" height="20" width="20" alt="icone instagram" /> iadmissionaria01
                                 </div>
                                 <div class="col">
                                     <h5>Home</h5>
                                     <p>Quem somos</p>
                                 </div>
-                                <div class="row">
-                                <div class="col">
-                                    <h5>Empresas parceiras</h5>
-                                    <p>Selo de parceria</p>
-                                </div>
-                                </div>
-                                <div class="row pt-5">
-                                <div class="col pl-5">
-                                    <a class="ml-auto botao" href="">Doe Agora</a>
-                                </div>
-                                </div>
+<!--                                <div class="row">-->
+<!--                                <div class="col">-->
+<!--                                    <h5>Empresas parceiras</h5>-->
+<!--                                    <p>Selo de parceria</p>-->
+<!--                                </div>-->
+<!--                                </div>-->
+<!--                                <div class="row pt-5">-->
+<!--                                <div class="col pl-5">-->
+<!--                                    <a class="ml-auto botao" href="">Doe Agora</a>-->
+<!--                                </div>-->
+<!--                                </div>-->
+
 							</div>
 						</div>
 						<div class="rights pl-5 pb-2">
 
 								<div class="row">
 									<div class="col-md-auto pt-4">
-                                        <img src="{% static 'base/img/logoreciclazaroBranco.png' %}" height="75" width="150" alt="Logo reciclazaro"  />
+<!--                                        <img src="{% static 'base/img/logo-assembleia.png' %}" height="65" width="110" alt="Logo Assembleia"  />-->
 									</div>
                                     <div class="col pt-4">
                                         <h5 class="text-center">Louvado seja o senhor. <br>

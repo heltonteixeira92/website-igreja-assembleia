@@ -1,7 +1,335 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 
 {% block content %}
+<main role="main">
 
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <img class="logo-capa img-fluid" src="{% static 'base/img/logo-nav.png' %}">
+                <!--        <h1 class="fw-light">Album example</h1>-->
+                <!--        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>-->
+                <!--        <p>-->
+                <!--          <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
+                <!--          <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+                <!--        </p>-->
+            </div>
+        </div>
+    </section>
+    <section class="text-center pb-4 pt-3 section-blue text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'base/img/user.png' %}" alt="icone de pessoas"/>
+                    <h5>Oficinas</h5>
+                    <p class="lead">
+                        Promover a criatividade e participação dos usuários em diversas atividades como culinária e
+                        informática.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="{% static 'base/img/educator.png' %}" alt="icone de palestra"/>
+                    <h5>Palestras</h5>
+                    <p class="lead">
+                        Informações sobre diversos temos, tendo como objetivo trazer novos conhecimentos, orientações,
+                        direitos e socialização.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="{% static 'base/img/house.png' %}" alt="icone de uma casa"/>
+                    <h5>Moradia autônoma</h5>
+                    <p class="lead">
+                        Atividade de reflexão, orientação e preparação para moradia autônoma.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="{% static 'base/img/music.png' %}" alt="icone de nota musical"/>
+                    <h5>Roda de música</h5>
+                    <p class="lead">
+                        Promover descontração, integração e criatividade.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="{% static 'base/img/park.png' %}" alt="icone de parque"/>
+                    <h5>Lazer</h5>
+                    <p class="lead">
+                        Realização de passeios, visitas culturais e eventos visando a convivência coletiva.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"/>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                        </svg>
+
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar</button>
+<!--                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"/>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                        </svg>
+
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar</button>
+<!--                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"/>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                        </svg>
+
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Visualizar</button>
+<!--                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--        <div class="col">-->
+                <!--          <div class="card shadow-sm">-->
+                <!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+
+                <!--            <div class="card-body">-->
+                <!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--              <div class="d-flex justify-content-between align-items-center">-->
+                <!--                <div class="btn-group">-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                <!--                </div>-->
+                <!--                <small class="text-muted">9 mins</small>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </div>-->
+                <!--        </div>-->
+                <!--        <div class="col">-->
+                <!--          <div class="card shadow-sm">-->
+                <!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+
+                <!--            <div class="card-body">-->
+                <!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--              <div class="d-flex justify-content-between align-items-center">-->
+                <!--                <div class="btn-group">-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                <!--                </div>-->
+                <!--                <small class="text-muted">9 mins</small>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </div>-->
+                <!--        </div>-->
+                <!--        <div class="col">-->
+                <!--          <div class="card shadow-sm">-->
+                <!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+
+                <!--            <div class="card-body">-->
+                <!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--              <div class="d-flex justify-content-between align-items-center">-->
+                <!--                <div class="btn-group">-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                <!--                </div>-->
+                <!--                <small class="text-muted">9 mins</small>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </div>-->
+                <!--        </div>-->
+
+                <!--        <div class="col">-->
+                <!--          <div class="card shadow-sm">-->
+                <!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+
+                <!--            <div class="card-body">-->
+                <!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--              <div class="d-flex justify-content-between align-items-center">-->
+                <!--                <div class="btn-group">-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                <!--                </div>-->
+                <!--                <small class="text-muted">9 mins</small>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </div>-->
+                <!--        </div>-->
+                <!--        <div class="col">-->
+                <!--          <div class="card shadow-sm">-->
+                <!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+
+                <!--            <div class="card-body">-->
+                <!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--              <div class="d-flex justify-content-between align-items-center">-->
+                <!--                <div class="btn-group">-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                <!--                </div>-->
+                <!--                <small class="text-muted">9 mins</small>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </div>-->
+                <!--        </div>-->
+                <!--        <div class="col">-->
+                <!--          <div class="card shadow-sm">-->
+                <!--            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+
+                <!--            <div class="card-body">-->
+                <!--              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+                <!--              <div class="d-flex justify-content-between align-items-center">-->
+                <!--                <div class="btn-group">-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
+                <!--                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+                <!--                </div>-->
+                <!--                <small class="text-muted">9 mins</small>-->
+                <!--              </div>-->
+                <!--            </div>-->
+                <!--          </div>-->
+                <!--        </div>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+
+                <!--			&lt;!&ndash; sessão o que fazemos &ndash;&gt;-->
+                <!--			<section class="text-center pb-5 pt-5">-->
+                <!--				<div class="container">-->
+                <!--					<h2 class="pb-5">-->
+                <!--						 O que fazemos-->
+                <!--					</h2>-->
+
+                <!--					<p class="lead">-->
+                <!--						A Casa de Simeão – Abrigo conveniado com a SMADS – Secretaria Municipal de Assistência e Desenvolvimento Social – é a casa de 150 homens com mais de sessenta anos.-->
+                <!--						Nossa metodologia de trabalho baseia-se no reconhecimento do idoso em seu ser integral, possuidor de sabedoria e experiências e em um processo de educação permanente-->
+                <!--						e realinhamento de suas visões e expectativas para construir novos caminhos. Trabalhamos no combate ao isolamento, sobre a base da escuta e a negociação, alimentado o desejo do idoso de continuar a desenvolver o seu potencial humano e intelectual.					</p>-->
+                <!--				</div>-->
+                <!--			</section>-->
+
+                <!--			&lt;!&ndash; Fim sessão depoimentos &ndash;&gt;-->
+                <!--			&lt;!&ndash; sessão atividades &ndash;&gt;-->
+
+                <!--			&lt;!&ndash; Fim sessão atividades &ndash;&gt;-->
+
+                <!--			<section class="section-blue text-center text-light pb-5 pt-5">-->
+                <!--				<div class="container pb-5 pt-5">-->
+                <!--				<h4>Eles são curiosos, têm muito a contar. Com cabelo branco e rugas que evidenciam os anos,-->
+                <!--					contam suas histórias, se emocionam com o passado, mas não perdem a esperança.</h4>-->
+                <!--				</div>-->
+                <!--			</section>-->
+
+                <!-- sessão nossos números -->
+                <section class="jumbotron text-center ">
+                    <!--				<h2 class="jumbotron-heading titulo pb-5">Impacto social</h2>-->
+                    <!--				<div class="mx-auto">-->
+                    <!--					<div class="row justify-content-center">-->
+                    <!--						<div class="card" style="width: 18rem;">-->
+                    <!--						  <div class="card-body card-one text-light">-->
+                    <!--							<h5 class="card-title"><img src="{% static 'base/img/icon.png' %}" alt="icone pessoa"  /></h5>							<p class="card-text">150 idosos com residencia</p>-->
+                    <!--						  </div>-->
+                    <!--						</div>-->
+                    <!--						<div class="card" style="width: 18rem;">-->
+                    <!--						  <div class="card-body card-two text-light">-->
+                    <!--							<h5 class="card-title"><img src="{% static 'base/img/icon.png' %}" alt="icone de nota musical"  /></h5>-->
+                    <!--							<p class="card-text">mais de 20 oficinas realizadas esse ano</p>-->
+                    <!--						  </div>-->
+                    <!--						</div>-->
+                    <!--						<div class="card" style="width: 18rem;">-->
+                    <!--						  <div class="card-body card-three text-light">-->
+                    <!--							<h5 class="card-title"><img src="{% static 'base/img/icon.png' %}" alt="icone pessoa"  /></h5>-->
+                    <!--							<p class="card-text">mais de 20 oficinas realizadas esse ano</p>-->
+                    <!--						  </div>-->
+                    <!--						</div>-->
+                    <!--					</div>-->
+                    <!--				</div>-->
+                </section>
+                <!-- Fim sessão nossos números -->
+                <br>
+                <!--			&lt;!&ndash; sessão depoimentos &ndash;&gt;-->
+                <!--			<section class="text-center pb-5">-->
+                <!--				<div class="container">-->
+                <!--					<h2 class="jumbotron-heading titulo pb-5">Depoimentos</h2>-->
+                <!--					<div class="row">-->
+                <!--						<div class="col-md-4">-->
+                <!--							<img alt="Bootstrap Image Preview" src="{% static 'base/img/idoso1.png' %}" class="rounded-circle" />-->
+                <!--							<p>A casa de simeão é muito acolhedora,-->
+                <!--								aqui fiz uma nova família </p>-->
+                <!--						</div>-->
+                <!--						<div class="col-md-4">-->
+                <!--							<img alt="Bootstrap Image Preview" src="{% static 'base/img/idoso2.png' %}" class="rounded-circle" />-->
+                <!--							<p>Eu que nunca tinha cozinhado,-->
+                <!--								aprendi vários pratos!</p>-->
+                <!--						</div>-->
+                <!--						<div class="col-md-4">-->
+                <!--							<img alt="Bootstrap Image Preview" src="{% static 'base/img/idoso3.png' %}" class="rounded-circle" />-->
+                <!--							<p>A palestra sobre saúde mental-->
+                <!--								foi muito boa!</p>-->
+                <!--						</div>-->
+                <!--					</div>-->
+                <!--				</div>-->
+                <!--			</section>-->
+                <!--			&lt;!&ndash; Fim sessão depoimentos &ndash;&gt;-->
+                <!--			&lt;!&ndash; sessão empresas com selo &ndash;&gt;-->
+                <!--			<section class="jumbotron text-center ">-->
+                <!--				<h2 class="jumbotron-heading titulo pb-5">Empresas com nosso selo de apoiador oficial</h2>-->
+                <!--				<div class="row">-->
+                <!--					<div class="col-md-4">-->
+                <!--						<img alt="Bootstrap Image Preview" src="{% static 'base/img/empresa1.png' %}" class="rounded-circle" />-->
+                <!--						<h4>Casa fit</h4>-->
+                <!--					</div>-->
+                <!--					<div class="col-md-4">-->
+                <!--						<img alt="Bootstrap Image Preview" src="{% static 'base/img/empresa2.png' %}" class="rounded-circle" />-->
+                <!--						<h4>Vieiras modas</h4>-->
+                <!--					</div>-->
+                <!--					<div class="col-md-4">-->
+                <!--						<img alt="Bootstrap Image Preview" src="{% static 'base/img/empresa3.png' %}" class="rounded-circle" />-->
+                <!--						<h4>CAtelier morais</h4>-->
+                <!--					</div>-->
+                <!--				</div>-->
+                <!--			</section>-->
+                <!-- Fim empresa com selo -->
+
+</main>
 {% endblock %}
