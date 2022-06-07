@@ -85,56 +85,78 @@
   {% endblock %}
 
 <!-- FOOTER (rodapé)-->
-					<footer class="main-footer mt-4 pt-4 text-light">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<h4>Igreja assembleia</h4>
-                                    <h5>Entre em contato:</h5>
-									<address>
-										Telefone: <a href="tel:+551132282064" class="text-light">(11) 3228-2064</a> <br>
-                                        Telefone: <a href="tel:+551132282064" class="text-light">(11) 3311-7864</a> <br>
-                                        <br>
-                                        <p>Sede: Rua Ateneu nº 165, Montes claros - MG </p>
-                                        <p>Setor 2: Av Dois, nº 401, Recanto das águas - MG</p>
-                                        <p>Setor 3: Rua Lago da vitória nº 26b, <br>Jardim Aurélio, Sâo Paulo - SP</p>
-									</address>
-								</div>
-                                <div class="col">
-                                    <h5>Redes socias</h5>
-                                    <img src="{% static 'base/img/intagram.png' %}" height="20" width="20" alt="icone instagram" /> iadmissionaria01
-                                </div>
-                                <div class="col">
-                                    <h5>Home</h5>
-                                    <p>Quem somos</p>
-                                </div>
-<!--                                <div class="row">-->
-<!--                                <div class="col">-->
-<!--                                    <h5>Empresas parceiras</h5>-->
-<!--                                    <p>Selo de parceria</p>-->
-<!--                                </div>-->
-<!--                                </div>-->
-<!--                                <div class="row pt-5">-->
-<!--                                <div class="col pl-5">-->
-<!--                                    <a class="ml-auto botao" href="">Doe Agora</a>-->
-<!--                                </div>-->
-<!--                                </div>-->
 
-							</div>
-						</div>
-						<div class="rights pl-5 pb-2">
+<div class="d-flex flex-column h-100">
 
-								<div class="row">
-									<div class="col-md-auto pt-4">
-<!--                                        <img src="{% static 'base/img/logo-assembleia.png' %}" height="65" width="110" alt="Logo Assembleia"  />-->
-									</div>
-                                    <div class="col pt-4">
-                                        <h5 class="text-center">Louvado seja o senhor. <br>
-                                            Conheça nosso trabalho: https://www.facebook.com/xxxxx</h5>
-                                    </div>
-								</div>
-							</div>
+    <!-- FOR DEMO PURPOSE -->
+    <section class="hero text-white py-5 flex-grow-1">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4">Bootstrap footer bottom</h1>
+                    <p class="fst-italic text-muted">Using Bootstrap 5 flexbox utilities, create a footer that always sticks to the bottom of your viewport. Snippet by <a class="text-primary" href="https://bootstrapious.com/" target="_blank">Bootstrapious</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					</footer>
+    <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1 text-white">Contato</h5>
+                    <p class="small text-muted">Telefone: <a href="tel:+551132282064" class="text-light">(11) 3228-2064</a> </p>
+                     <p class="small text-muted">Telefone: <a href="tel:+551132282064" class="text-light">(11) 3311-7864</a>  </p>
+                    <p class="small text-muted">Sede: Rua Ateneu nº 165, Montes claros - MG </p>
+                    <p class="small text-muted">Setor 2: Av Dois, nº 401, Recanto das águas - MG</p>
+                    <p class="small text-muted">Setor 3: Rua Lago da vitória nº 26b, <br>Jardim Aurélio, Sâo Paulo - SP</p>
+                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Get started</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Redes Sociais</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><img src="{% static 'base/img/intagram.png' %}" height="20" width="20" alt="icone instagram" /> iadmissionaria01</li>
+<!--                        <li><a href="#">FAQ</a></li>-->
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+</div>
+<div class="rights pl-5 pb-2">
+    <div class="row">
+        <div class="col-md-auto pt-4">
+            <!--                                        <img src="{% static 'base/img/logo-assembleia.png' %}" height="65" width="110" alt="Logo Assembleia"  />-->
+        </div>
+        <div class="col pt-4">
+            <h5 class="text-center">Louvado seja o senhor. <br>
+                Conheça nosso trabalho: https://www.facebook.com/xxxxx</h5>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
