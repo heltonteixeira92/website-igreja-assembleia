@@ -36,3 +36,4 @@ class Post(models.Model):
 
     objects = models.Manager()
     published = PublishedManager()
+ghp_i19hEMvGtuiW82HTgm9DFEQr6RfLkE1Nunt
