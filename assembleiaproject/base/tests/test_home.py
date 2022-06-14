@@ -9,5 +9,5 @@ def resp(client, db):
 
 
 # emula requisição http
-# def test_status_code(resp):
-#     assert resp.status_code == 200
+def test_status_code(resp):
+    assert resp.status_code == 200
