@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'assembleiaproject.base',
     'assembleiaproject.blog',
+    'assembleiaproject.gallery',
 ]
 
 MIDDLEWARE = [
