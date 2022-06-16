@@ -164,7 +164,7 @@
 
                                     <div class="card-body">
                                         <h3 class="card-title"><a href="#" class="text-secondary">{{ post.title|title }}</a></h3>
-                                        <p class="card-text">{{ post.body|linebreaks }} </p>
+                                        <p class="card-text">{{ post.body|truncatewords:30|linebreaks }} </p>
                                         <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More</a>
                                         <small class="text-muted">{{ post.publish|timesince }}</small>
                                     </div>
