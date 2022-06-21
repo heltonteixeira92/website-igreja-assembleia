@@ -36,9 +36,9 @@
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="{% url 'base:home' %}" class="nav-link text-secondary">Home</a></li>
-                <li><a href="#" class="nav-link  text-white">Galeria</a></li>
+                <li><a href="{% url 'gallery:gallery' %}" class="nav-link  text-white">Galeria</a></li>
                 <li><a href="{% url 'blog:post_list' %}" class="nav-link  text-white">Blog</a></li>
-                <li><a href="#" class="nav-link  text-white">Sobre nós</a></li>
+                <li><a href="{% url 'base:about_us' %}" class="nav-link  text-white">Sobre nós</a></li>
             </ul>
 
 <!--            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">-->
@@ -117,8 +117,8 @@
                     <ul class="list-unstyled text-muted">
                         <li><a href="{% url 'base:home' %}">Home</a></li>
                         <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
+<!--                        <li><a href="#">Get started</a></li>-->
+                        <li><a href="{% url 'base:about_us' %}">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">

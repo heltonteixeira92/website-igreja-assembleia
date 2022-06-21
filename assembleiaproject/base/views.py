@@ -20,3 +20,7 @@ def contact_us(request):
         message=message
     )
     return render(request, 'contact-us.html')
+
+
+def about_us(request):
+    return render(request, 'about-us.html')
