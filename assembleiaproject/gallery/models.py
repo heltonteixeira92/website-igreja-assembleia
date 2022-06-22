@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext as _
 from django.utils.text import slugify
+from django.utils.safestring import mark_safe
+from django.utils.html import format_html
 
 
 # Create your models here.
@@ -21,6 +23,9 @@ class Album(models.Model):
 
 
 class Image(models.Model):
+    def album_directory_path(instance, filename):
+        return 'album/{0}/{1}'.format(instance.album.slug, filename)
+
     STATUS_CHOICES = (
         ('draft', 'Draft'),
         ('published', 'Published')
@@ -31,7 +36,7 @@ class Image(models.Model):
                               null=True)
     title = models.CharField(_('title'), max_length=128)
     slug = models.SlugField(_('slug'), max_length=128, blank=True)
-    img = models.ImageField(upload_to='images/%Y/%m/%d/')
+    img = models.ImageField(upload_to=album_directory_path)
     description = models.TextField(_('description'), blank=True)
     created = models.DateTimeField(_('created'), auto_now_add=True, db_index=True)
     status = models.CharField(_('status'), max_length=10, choices=STATUS_CHOICES, default='draft')
@@ -46,3 +51,13 @@ class Image(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
+    @mark_safe
+    def icon(self):
+        if self.img:
+            return f'<img width="30px" height="30px" src="/media/{self.img}"  />'
+        else:
+            return 'No Image Found'
+
+    icon.short_description = 'Imagem'
+    icon.allow_tags = True
