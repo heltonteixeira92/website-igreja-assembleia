@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.utils.text import slugify
 from django.utils.safestring import mark_safe
-from django.utils.html import format_html
 
 
 # Create your models here.
