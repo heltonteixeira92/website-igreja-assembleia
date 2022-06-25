@@ -39,6 +39,9 @@
                 <li><a href="{% url 'gallery:gallery' %}" class="nav-link  text-white">Galeria</a></li>
                 <li><a href="{% url 'blog:post_list' %}" class="nav-link  text-white">Blog</a></li>
                 <li><a href="{% url 'base:about_us' %}" class="nav-link  text-white">Sobre nós</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'admin:index' %}" class="nav-link  text-white">Admin</a></li>
+                {% endif %}
             </ul>
 
 <!--            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">-->
@@ -46,8 +49,15 @@
 <!--            </form>-->
 
             <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-<!--                <button type="button" class="btn btn-warning">Sign-up</button>-->
+                {% if user.is_authenticated %}
+                     <a href="{% url 'logout' %}">
+                    <button type="button" class="btn btn-outline-light me-2">Sair</button>
+                     </a>
+                {% else %}
+                    <a href="{% url 'login' %}">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
