@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'assembleiaproject.blog',
     'assembleiaproject.gallery',
     'assembleiaproject.contact',
+    'assembleiaproject.account',
 ]
 
 MIDDLEWARE = [
@@ -106,6 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGOUT_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

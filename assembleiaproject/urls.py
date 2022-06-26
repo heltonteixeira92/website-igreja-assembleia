@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('assembleiaproject.base.urls')),
     path('blog/', include('assembleiaproject.blog.urls')),
     path('galeria/', include('assembleiaproject.gallery.urls')),
+    path('account/', include('assembleiaproject.account.urls'))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
