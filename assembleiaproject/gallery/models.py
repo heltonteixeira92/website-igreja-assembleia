@@ -1,7 +1,13 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import gettext as _
 from django.utils.text import slugify
 from django.utils.safestring import mark_safe
+
+
+class PhotoManager(models.Manager):
+    def get_queryset(self):
+        return super(PhotoManager, self).get_queryset().filter(status='published')
 
 
 # Create your models here.
@@ -10,7 +16,7 @@ class Album(models.Model):
     slug = models.SlugField(_('slug'), max_length=128)
 
     class Meta:
-        ordering = ('title', )
+        ordering = ('title',)
 
     def __str__(self):
         return self.title
@@ -51,6 +57,9 @@ class Image(models.Model):
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('gallery:photo_detail', args=[self.slug])
+
     @mark_safe
     def icon(self):
         if self.img:
@@ -60,3 +69,6 @@ class Image(models.Model):
 
     icon.short_description = 'Imagem'
     icon.allow_tags = True
+
+    objects = models.Manager()
+    photopublished = PhotoManager()

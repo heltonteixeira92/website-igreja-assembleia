@@ -2,11 +2,13 @@ from django.shortcuts import render
 
 from assembleiaproject.blog.models import Post
 from assembleiaproject.contact.models import Message
+from assembleiaproject.gallery.models import Image
 
 
 def home(request):
-    posts = Post.published.all()[:3]
-    context = {'posts': posts}
+    posts = Post.published.all()[:6]
+    photos = Image.photopublished.all()[:6]
+    context = {'posts': posts, 'photos': photos}
     return render(request, 'home.html', context)
 
 
