@@ -69,42 +69,44 @@
 
             <div class="row text-center text-lg-start">
 
+                {% for photo in photos %}
                 <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300"
+                    <a href="{{ photo.get_absolute_url }}" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="{{ photo.img.url }}"
                              alt="">
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300"
-                             alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300"
-                             alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300"
-                             alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300"
-                             alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300"
-                             alt="">
-                    </a>
-                </div>
+                {% endfor %}
+{#                <div class="col-lg-3 col-md-4 col-6">#}
+{#                    <a href="#" class="d-block mb-4 h-100">#}
+{#                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300"#}
+{#                             alt="">#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-4 col-6">#}
+{#                    <a href="#" class="d-block mb-4 h-100">#}
+{#                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300"#}
+{#                             alt="">#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-4 col-6">#}
+{#                    <a href="#" class="d-block mb-4 h-100">#}
+{#                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300"#}
+{#                             alt="">#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-4 col-6">#}
+{#                    <a href="#" class="d-block mb-4 h-100">#}
+{#                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300"#}
+{#                             alt="">#}
+{#                    </a>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-md-4 col-6">#}
+{#                    <a href="#" class="d-block mb-4 h-100">#}
+{#                        <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300"#}
+{#                             alt="">#}
+{#                    </a>#}
+{#                </div>#}
             </div>
 
         </div>
