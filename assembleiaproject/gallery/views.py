@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from assembleiaproject.gallery.models import Image, Album
+from assembleiaproject.gallery.models import Image, Album # noqa
 
 
 def gallery(request):
