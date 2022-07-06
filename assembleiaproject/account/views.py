@@ -79,7 +79,7 @@ def register(request):
         send_activation_email(user, request)
 
         messages.add_message(request, messages.SUCCESS,
-                             'Conta criada com sucesso, você recebera um link de confirmação no seu e-mail')
+                             'Conta criada, você recebera um link de confirmação no seu e-mail')
         return redirect('login')
 
     return render(request, 'account/register.html')
@@ -97,7 +97,10 @@ def user_login(request):
                 if user is not None:
                     if user.is_active:
                         login(request, user)
-                        return redirect('admin:index')
+                        if user.is_superuser:
+                            return redirect('admin:index')
+                        else:
+                            return redirect('base:home')
 
     else:
         form = LoginForm()
@@ -119,7 +122,7 @@ def activate_user(request, uidb64, token):
         user.email_verified = True
         user.save()
 
-        messages.add_message(request, messages.SUCCESS, 'Email verified, you can now login')
+        messages.add_message(request, messages.SUCCESS, 'Email verificado, agora você pode logar')
         return redirect(reverse('login'))
 
     return render(request, 'account/activate-failed.html', {'user': user})
