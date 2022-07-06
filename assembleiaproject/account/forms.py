@@ -13,4 +13,6 @@ class LoginForm(forms.Form):
             user = authenticate(username=email, password=password)
             if not user:
                 raise forms.ValidationError('Usuário ou senha inválidos.')
+            if not user.email_verified:
+                raise forms.ValidationError('Email não verificado, por favor veja sua caixa de e-mail')
         return super(LoginForm, self).clean()
