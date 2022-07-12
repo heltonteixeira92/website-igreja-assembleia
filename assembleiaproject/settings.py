@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'assembleiaproject.gallery',
     'assembleiaproject.contact',
     'assembleiaproject.account',
+
+    # 3rd
+    'taggit',
 ]
 
 MIDDLEWARE = [
