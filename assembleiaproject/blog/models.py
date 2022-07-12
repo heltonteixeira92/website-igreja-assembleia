@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.utils.translation import gettext as _
 from django.conf import settings
 from django.utils import timezone
+from taggit.managers import TaggableManager
 
 
 class PublishedManager(models.Manager):
@@ -39,8 +40,9 @@ class Post(models.Model):
         return reverse('blog:post_detail',
                        args=[self.publish.year,
                              self.publish.month,
-                             self.publish.day,
+
                              self.slug])
 
     objects = models.Manager()
     published = PublishedManager()
+    tags = TaggableManager()
