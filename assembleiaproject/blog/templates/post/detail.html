@@ -12,7 +12,7 @@
         <div class="cont">
           <img style="width: 350px; margin-top: 20px;" src="{{ post.img.url }}">
         </div>
-      <p>{{ post.body|linebreaks }}</p>
+      <p>{{ post.body|linebreaks | safe }}</p>
       <br>
 {#           <p>Fonte: {{ post.fonte }}</p>#}
     </article>
