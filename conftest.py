@@ -2,6 +2,13 @@ import pytest
 from model_bakery import baker
 
 
+def gen_func():
+    return 'value'
+
+
+baker.generators.add('ckeditor.fields.RichTextField', gen_func)
+
+
 @pytest.fixture
 def post_created(db):
     post_model = baker.make('Post')
