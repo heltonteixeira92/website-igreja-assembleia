@@ -17,7 +17,7 @@
                 <a href="{{ post.get_absolute_url }}" class="blog-post-title">{{ post.title|title }}</a>
                 <p class="blog-post-meta">{{ post.publish }} <a href="#">{{ post.author.first_name }}</a></p>
 
-                <p> {{ post.body|truncatewords:90|linebreaks | safe }}</p>
+                <p> {{ post.body|safe|truncatewords:90|linebreaks}}</p>
                 <hr>
 
             </article>
