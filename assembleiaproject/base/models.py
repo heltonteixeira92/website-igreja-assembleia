@@ -101,6 +101,10 @@ class Profile(models.Model):
     date_of_birth = models.DateField(_('date of birth'), blank=True, null=True)
     photo = models.ImageField(_('photo'), upload_to='users/%Y/%m/', blank=True)
 
+    class Meta:
+        verbose_name = _('profile')
+        verbose_name_plural = _('profiles')
+
     def __str__(self):
         return f'Perfil para o usuário {self.user.first_name}'
 

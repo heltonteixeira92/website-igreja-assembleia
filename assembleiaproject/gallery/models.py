@@ -48,6 +48,8 @@ class Image(models.Model):
 
     class Meta:
         ordering = ('album', 'title')
+        verbose_name = _('image')
+        verbose_name_plural = _('images')
 
     def __str__(self):
         return self.title

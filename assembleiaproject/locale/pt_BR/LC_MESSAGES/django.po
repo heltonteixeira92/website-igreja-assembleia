@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-19 15:15-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: assembleiaproject/base/admin.py:33
+msgid "Permissions"
+msgstr ""
+
+#: assembleiaproject/base/admin.py:36
+msgid "Important dates"
+msgstr ""
+
+#: assembleiaproject/base/admin.py:120
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: assembleiaproject/base/admin.py:130
+msgid "Password changed successfully."
+msgstr ""
+
+#: assembleiaproject/base/admin.py:150
+#, python-format
+msgid "Change password: %s"
+msgstr ""
+
+#: assembleiaproject/base/models.py:50
+msgid "first name"
+msgstr "primeiro nome"
+
+#: assembleiaproject/base/models.py:51
+msgid "email address"
+msgstr "endereço de e-mail"
+
+#: assembleiaproject/base/models.py:54
+msgid "staff status"
+msgstr ""
+
+#: assembleiaproject/base/models.py:56
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: assembleiaproject/base/models.py:59
+msgid "active"
+msgstr "ativo"
+
+#: assembleiaproject/base/models.py:62
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: assembleiaproject/base/models.py:66
+msgid "date joined"
+msgstr "data de inscrição"
+
+#: assembleiaproject/base/models.py:75
+msgid "user"
+msgstr "usuário"
+
+#: assembleiaproject/base/models.py:76
+msgid "users"
+msgstr "usuários"
+
+#: assembleiaproject/base/models.py:101
+msgid "date of birth"
+msgstr "data de aniversário"
+
+#: assembleiaproject/base/models.py:102
+msgid "photo"
+msgstr "foto"
+
+#: assembleiaproject/base/models.py:105
+msgid "profile"
+msgstr "perfil"
+
+#: assembleiaproject/base/models.py:106
+msgid "profiles"
+msgstr "perfis"
+
+#: assembleiaproject/blog/models.py:21 assembleiaproject/gallery/models.py:15
+#: assembleiaproject/gallery/models.py:42
+msgid "title"
+msgstr "título"
+
+#: assembleiaproject/blog/models.py:22 assembleiaproject/gallery/models.py:16
+#: assembleiaproject/gallery/models.py:43
+msgid "slug"
+msgstr ""
+
+#: assembleiaproject/blog/models.py:25
+msgid "body"
+msgstr "corpo da postagem"
+
+#: assembleiaproject/blog/models.py:26
+msgid "publish"
+msgstr "publicar"
+
+#: assembleiaproject/blog/models.py:28 assembleiaproject/contact/models.py:10
+#: assembleiaproject/gallery/models.py:46
+msgid "created"
+msgstr "criado"
+
+#: assembleiaproject/blog/models.py:29
+msgid "updated"
+msgstr "atualizado"
+
+#: assembleiaproject/blog/models.py:30 assembleiaproject/gallery/models.py:47
+msgid "status"
+msgstr ""
+
+#: assembleiaproject/blog/models.py:34
+msgid "Post"
+msgstr "Postagem"
+
+#: assembleiaproject/blog/models.py:35
+msgid "Posts"
+msgstr "Postagens"
+
+#: assembleiaproject/contact/models.py:7
+msgid "name"
+msgstr "nome"
+
+#: assembleiaproject/contact/models.py:8
+msgid "email"
+msgstr ""
+
+#: assembleiaproject/contact/models.py:9
+msgid "message"
+msgstr "mensagem"
+
+#: assembleiaproject/gallery/models.py:40
+msgid "album"
+msgstr "album"
+
+#: assembleiaproject/gallery/models.py:45
+msgid "description"
+msgstr "descrição"
+
+#: assembleiaproject/gallery/models.py:51
+msgid "image"
+msgstr "imagem"
+
+#: assembleiaproject/gallery/models.py:52
+msgid "images"
+msgstr "imagens"
