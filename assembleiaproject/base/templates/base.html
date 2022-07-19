@@ -1,4 +1,5 @@
 {% load static %}
+{% load blog_tags %}
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -35,11 +36,12 @@
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="{% url 'base:home' %}" class="nav-link text-secondary">Home</a></li>
-                <li><a href="{% url 'gallery:gallery' %}" class="nav-link  text-white">Galeria</a></li>
-                <li><a href="{% url 'blog:post_list' %}" class="nav-link  text-white">Blog</a></li>
-                <li><a href="{% url 'base:about_us' %}" class="nav-link  text-white">Sobre nós</a></li>
-                {% if user.is_authenticated %}
+                <li><a href="{% url 'base:home' %}" {% if section == 'home' %} class="nav-link text-secondary" {% else %} class="nav-link  text-white"{% endif %}>Home</a></li>
+                <li><a href="{% url 'gallery:gallery' %}" {% if section == 'gallery' %} class="nav-link  text-secondary" {% else %} class="nav-link text-white"{% endif %}>Galeria</a></li>
+                <li><a href="{% url 'blog:post_list' %}" {% if section == 'blog' %} class="nav-link  text-secondary" {% else %} class="nav-link  text-white"{% endif %}>Blog</a></li>
+                <li><a href="{% url 'base:about_us' %}" {% if section == 'about_us' %} class="nav-link  text-secondary" {% else %} class="nav-link  text-white"{% endif %}>Sobre nós</a></li>
+                <li><a href="{% url 'base:contact' %}" {% if section == 'contact_us' %} class="nav-link  text-secondary" {% else %} class="nav-link  text-white"{% endif %}>Contato</a></li>
+                {% if user.is_authenticated and user.is_staff %}
                 <li><a href="{% url 'admin:index' %}" class="nav-link  text-white">Admin</a></li>
                 {% endif %}
             </ul>
@@ -127,7 +129,6 @@
                     <ul class="list-unstyled text-muted">
                         <li><a href="{% url 'base:home' %}">Home</a></li>
                         <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
-<!--                        <li><a href="#">Get started</a></li>-->
                         <li><a href="{% url 'base:about_us' %}">FAQ</a></li>
                     </ul>
                 </div>
@@ -138,16 +139,16 @@
 <!--                        <li><a href="#">FAQ</a></li>-->
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Newsletter</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                </div>
+{#                <div class="col-lg-4 col-md-6">#}
+{#                    <h5 class="text-white mb-3">Newsletter</h5>#}
+{#                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>#}
+{#                    <form action="#">#}
+{#                        <div class="input-group mb-3">#}
+{#                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">#}
+{#                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>#}
+{#                        </div>#}
+{#                    </form>#}
+{#                </div>#}
             </div>
         </div>
     </footer>

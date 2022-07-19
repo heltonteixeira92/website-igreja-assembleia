@@ -8,24 +8,30 @@ from assembleiaproject.gallery.models import Image
 def home(request):
     posts = Post.published.all()[:6]
     photos = Image.photopublished.all()[:6]
-    context = {'posts': posts, 'photos': photos}
+    context = {'posts': posts,
+               'photos': photos,
+               'section': 'home',
+               }
     return render(request, 'home.html', context)
 
 
 def contact_us(request):
-    name = request.POST.get('name')
-    email = request.POST.get('emailAddress')
-    message = request.POST.get('message')
-    Message.objects.create(
-        name=name,
-        email=email,
-        message=message
-    )
-    return render(request, 'contact-us.html')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('emailAddress')
+        message = request.POST.get('message')
+        Message.objects.create(
+            name=name,
+            email=email,
+            message=message
+        )
+    context = {'section': 'contact_us'}
+    return render(request, 'contact-us.html', context)
 
 
 def about_us(request):
-    return render(request, 'about-us.html')
+    context = {'section': 'about_us'}
+    return render(request, 'about-us.html', context)
 
 
 def handler500(request):

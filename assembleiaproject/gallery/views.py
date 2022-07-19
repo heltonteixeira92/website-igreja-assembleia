@@ -6,7 +6,10 @@ from assembleiaproject.gallery.models import Image, Album # noqa
 
 def gallery(request):
     photos = Image.photopublished.all()
-    context = {'photos': photos}
+
+    context = {'photos': photos,
+               'section': 'gallery'
+               }
 
     # Album.objects.select_related()
     return render(request, 'gallery.html', context)
