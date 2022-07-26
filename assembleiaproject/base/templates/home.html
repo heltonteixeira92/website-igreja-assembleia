@@ -122,25 +122,30 @@
                     <div class="container">
                         <div class="row">
                             {% for post in posts %}
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card my-3">
+                            <div class="">
+{#                                <div class="card my-3">#}
 
-                                    <img src="{{ post.img.url }}"
-                                         class="card-image-top" alt="{{ post.title }}">
+{#                                    <img src="{{ post.img.url }}"#}
+{#                                         class="card-image-top" alt="{{ post.title }}">#}
 
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="#" class="text-secondary">{{ post.title|title }}</a></h3>
-                                        <p class="card-text">{{ post.body|safe|truncatewords:30|linebreaks}} </p>
-                                        <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Ler mais</a>
-                                        <small class="text-muted">{{ post.publish|timesince }}</small>
+                                    <div class="body">
+                                        <h3 class="title"><a href="{{ post.get_absolute_url }}" class="text-secondary">{{ post.title|title }}</a></h3>
+                                        <p class="text">{{ post.body|safe|truncatewords:30|linebreaks}} </p>
+                                        <small class="text-muted">Publicado: {{ post.publish|timesince }}</small>
                                     </div>
 
-                                </div>
+{#                                </div>#}
                             </div>
                             {% endfor %}
+
+
                         </div>
+
                     </div>
+                <br>
+                <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Ver todas</a>
                 </section>
+        </div>
 
 </main>
 {% endblock %}
