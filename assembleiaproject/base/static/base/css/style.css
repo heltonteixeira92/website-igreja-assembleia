@@ -129,3 +129,11 @@ footer {
     background-color: transparent;
     text-decoration: underline;
 }
+
+
+
+.align-center {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

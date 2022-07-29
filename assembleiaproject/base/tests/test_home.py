@@ -31,4 +31,4 @@ def test_gallery_section_title_home(resp):
 
 
 def test_post_section_title_home(resp):
-    assert_contains(resp, '<h1 class="fw-light text-center text-lg-start mt-4 mb-0">Postagens</h1>')
+    assert_contains(resp, '<h1 class="fw-light text-center text-lg-start mt-4 mb-0">Postagens Recentes</h1>')
