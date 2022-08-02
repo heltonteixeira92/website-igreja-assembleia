@@ -16,7 +16,7 @@ codecov==2.1.12
 pytest-cov==3.0.0
 Collectfast==2.2.0
 Pillow==9.1.1
-model-bakery==1.6.0
+model-bakery==1.7.0
 six==1.16.0
 django-taggit==3.0.0
 django-ckeditor==6.4.2
