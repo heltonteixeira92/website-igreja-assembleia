@@ -3,7 +3,6 @@
 
 
 {% block content %}
-<main role="main">
 
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
@@ -50,10 +49,7 @@
                     <div class="container">
                         <div class="row">
                             {% for post in posts %}
-                            <div class="">
-{#                                <div class="card my-3">#}
-
-
+                            <div class="mb-4">
                                     <div class="body">
                                         <h3 class="title"><a href="{{ post.get_absolute_url }}" class="text-secondary">{{ post.title|title }}</a></h3>
                                         <br>
@@ -64,9 +60,8 @@
                                         <p class="text">{{ post.body|safe|truncatewords:50|linebreaks}} </p>
                                         <small class="text-muted">Publicado: {{ post.publish|timesince }} atrás, por {{ post.author.first_name|title }}.</small>
                                         <br>
+                                        <br>
                                     </div>
-
-{#                                </div>#}
                             </div>
                             {% endfor %}
 
@@ -78,6 +73,5 @@
                 <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Ver todas</a>
                 </section>
         </div>
-
-</main>
+    </div>
 {% endblock %}

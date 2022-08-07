@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from assembleiaproject.blog.models import Post
-from assembleiaproject.contact.models import Message
 from assembleiaproject.gallery.models import Image
 
 
@@ -13,20 +12,6 @@ def home(request):
                'section': 'home',
                }
     return render(request, 'home.html', context)
-
-
-def contact_us(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('emailAddress')
-        message = request.POST.get('message')
-        Message.objects.create(
-            name=name,
-            email=email,
-            message=message
-        )
-    context = {'section': 'contact_us'}
-    return render(request, 'contact-us.html', context)
 
 
 def about_us(request):

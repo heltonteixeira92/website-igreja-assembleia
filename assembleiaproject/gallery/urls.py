@@ -6,4 +6,5 @@ app_name = 'gallery'
 urlpatterns = [
     path('', gallery, name='gallery'),
     path('imagem/<slug:slug>/', photo_detail, name='photo_detail')
+
 ]
