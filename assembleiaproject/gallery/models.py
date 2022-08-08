@@ -4,6 +4,10 @@ from django.utils.translation import gettext as _
 from django.utils.text import slugify
 from django.utils.safestring import mark_safe
 
+from PIL import Image as ImagePIL
+from django.conf import settings
+import os
+
 
 class PhotoManager(models.Manager):
     def get_queryset(self):
@@ -29,7 +33,13 @@ class Album(models.Model):
 
 class Image(models.Model):
     def album_directory_path(instance, filename):
-        return 'album/{0}/{1}'.format(instance.album.slug, filename)
+        img_name = 'album/{0}/{1}'.format(instance.album.slug, filename)
+        full_path = os.path.join(settings.MEDIA_ROOT, img_name)
+
+        if os.path.exists(full_path):
+            os.remove(full_path)
+
+        return img_name
 
     STATUS_CHOICES = (
         ('draft', 'Draft'),
@@ -58,6 +68,12 @@ class Image(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+        size = 600, 600
+
+        if self.img:
+            pic = ImagePIL.open(self.img.path)
+            pic.thumbnail(size, ImagePIL.LANCZOS)
+            pic.save(self.img.path)
 
     def get_absolute_url(self):
         return reverse('gallery:photo_detail', args=[self.slug])

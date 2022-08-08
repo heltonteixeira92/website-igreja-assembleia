@@ -10,7 +10,6 @@ def contact_us(request):
 
 def get_message(request):
     if request.method == 'POST':
-        # import ipdb;ipdb.set_trace()
         name = request.POST.get('name')
         email = request.POST.get('emailAddress')
         message = request.POST.get('message')
