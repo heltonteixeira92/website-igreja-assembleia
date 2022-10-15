@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 from django.conf import settings
 from django.utils import timezone
 from taggit.managers import TaggableManager
-from ckeditor.fields import RichTextField
+from tinymce.models import HTMLField
 
 
 class PublishedManager(models.Manager):
@@ -22,7 +22,7 @@ class Post(models.Model):
     slug = models.SlugField(_('slug'), max_length=250)
     author = models.ForeignKey(settings.AUTH_USER_MODEL,
                                on_delete=models.CASCADE, related_name='blog_posts')
-    body = RichTextField(_('body'))
+    body = HTMLField(_('body'))
     publish = models.DateTimeField(_('publish'), default=timezone.now)
     img = models.ImageField(upload_to='blog_img')
     created = models.DateTimeField(_('created'), auto_now_add=True)

@@ -24,12 +24,12 @@ urlpatterns = [
     path('blog/', include('assembleiaproject.blog.urls')),
     path('galeria/', include('assembleiaproject.gallery.urls')),
     path('account/', include('assembleiaproject.account.urls')),
-    path('contato/', include('assembleiaproject.contact.urls'))
+    path('contato/', include('assembleiaproject.contact.urls')),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
 
 handler500 = 'assembleiaproject.base.views.handler500'
 handler404 = 'assembleiaproject.base.views.handler404'
