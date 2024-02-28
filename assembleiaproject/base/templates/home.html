@@ -17,7 +17,7 @@
             </div>
         </div>
     </section>
-    {% comment %} <section class="text-center pb-4 pt-3 section-blue text-white">
+     <section class="text-center pb-4 pt-3 section-blue text-white">
         <div class="container">
 
             <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Galeria</h1>
@@ -30,48 +30,90 @@
                 <div class="col-lg-3 col-md-4 col-6">
                     <a href="{{ photo.img.url }}" class="d-block mb-4 h-100">
                         <img class="img-fluid img-thumbnail" src="{{ photo.img.url }}"
-                             alt="">
+                             alt="{{ photo.description }}">
                     </a>
                 </div>
                 {% endfor %}
             </div>
 
         </div>
-    </section>{% endcomment %}
-    <div class="album py-5 bg-light">
+    </section>
+
+    <div class="section sec-cta overlay" style="background-color: gray">
         <div class="container">
-
-            <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Postagens Recentes</h1>
-
-            <hr class="mt-2 mb-5">
-
-                <section class="bg-light py-4 my-5">
-                    <div class="container">
-                        <div class="row">
-                            {% for post in posts %}
-                            <div class="mb-4">
-                                    <div class="body">
-                                        <h3 class="title"><a href="{{ post.get_absolute_url }}" class="text-secondary">{{ post.title|title }}</a></h3>
-                                        <br>
-                                          <img src="{{ post.img.url }}" style="width: 300px; height: 500px;"
-                                         class="card-image-top " alt="{{ post.title }}">
-                                        <br>
-
-                                        <p class="text">{{ post.body|safe|truncatewords:50|linebreaks}} </p>
-                                        <small class="text-muted">Publicado: {{ post.publish|timesince }} atrás, por {{ post.author.first_name|title }}.</small>
-                                        <br>
-                                        <br>
-                                    </div>
-                            </div>
-                            {% endfor %}
-
-
-                        </div>
-
-                    </div>
-                <br>
-                <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Ver todas</a>
-                </section>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="0">
+                    <h2 class="heading text-white">Quer falar conosco?</h2>
+                    <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts. </p>
+                </div>
+                <div class="col-lg-5 text-end" data-aos="fade-up" data-aos-delay="100">
+                    <a href="{% url 'contact:contact_us' %}" class="btn btn-outline-white-reverse">Contate-nos</a>
+                </div>
+            </div>
         </div>
     </div>
+    <section class="section sec-news">
+    <div class="container">
+        <div class="row mb-5 mt-3">
+            <div class="col-lg-7">
+                <h2 class="heading text-primary">Postagens Recentes</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-lg-4">
+                <div class="card post-entry mb-5">
+                    <a href="{{ post.get_absolute_url }}"><img src="{{ post.img.url }}" class="card-img-top" alt="Image"></a>
+                    <div class="card-body">
+                        <div><span class="text-uppercase font-weight-bold date">{{ post.publish }}</span> </div>
+                        <h5 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title|safe|truncatewords:3}}</a></h5>
+                        <p>{{ post.body|safe|truncatewords:20|linebreaks }}</p>
+                        <p class="mt-05 mb-0"><a href="{{ post.get_absolute_url }}">leia mais</a></p>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+    </section>
+{#    <div class="album py-5 bg-light">#}
+{#        <div class="container">#}
+{##}
+{#            <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Postagens Recentes</h1>#}
+{##}
+{#            <hr class="mt-2 mb-5">#}
+{##}
+{#                <section class="bg-light py-4 my-5">#}
+{#                    <div class="container">#}
+{#                        <div class="row">#}
+{#                            {% for post in posts %}#}
+{#                            <div class="mb-4">#}
+{#                                    <div class="body">#}
+{#                                        <h3 class="title"><a href="{{ post.get_absolute_url }}" class="text-secondary">{{ post.title|title }}</a></h3>#}
+{#                                        <br>#}
+{#                                          <img src="{{ post.img.url }}" style="width: 300px; height: 500px;"#}
+{#                                         class="card-image-top " alt="{{ post.title }}">#}
+{#                                        <br>#}
+{##}
+{#                                        <p class="text">{{ post.body|safe|truncatewords:50|linebreaks}} </p>#}
+{#                                        <small class="text-muted">Publicado: {{ post.publish|timesince }} atrás, por {{ post.author.first_name|title }}.</small>#}
+{#                                        <br>#}
+{#                                        <br>#}
+{#                                    </div>#}
+{#                            </div>#}
+{#                            {% endfor %}#}
+{##}
+{##}
+{#                        </div>#}
+{##}
+{#                    </div>#}
+{#                <br>#}
+{#                <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Ver todas</a>#}
+{#                </section>#}
+{#        </div>#}
+{#    </div>#}
 {% endblock %}

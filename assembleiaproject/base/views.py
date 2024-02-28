@@ -6,11 +6,13 @@ from assembleiaproject.gallery.models import Image
 
 def home(request):
     posts = Post.published.all()[:6]
-    photos = Image.photopublished.all()[:6]
+    photos = Image.photopublished.all()[:4]
+
     context = {'posts': posts,
                'photos': photos,
                'section': 'home',
                }
+
     return render(request, 'home.html', context)
 
 

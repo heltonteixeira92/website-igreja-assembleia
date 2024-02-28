@@ -1,18 +1,9 @@
 {% extends 'base.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<title>Boto | Photography HTML Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Boto Photo Studio HTML Template">
-	<meta name="keywords" content="photo, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	
+
 	<!-- Stylesheets -->
 	{% block extracss %}
-    
+
 	<link rel="stylesheet" href="{% static 'gallery/css/bootstrap.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'gallery/css/font-awesome.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'gallery/css/slicknav.min.css' %}"/>
@@ -20,16 +11,15 @@
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="{% static 'gallery/css/style.css' %}"/>
-	
-	{% endblock extracss %}
 
-	<!--[if lt IE 9]>
+        <!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-</head>
-<body>
+	{% endblock extracss %}
+
+
 {% block content %}
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -37,7 +27,7 @@
 	</div>
 
 
-	<!-- About Page -->
+
 	<div class="gallery__page">
 		<div class="gallery__warp">
 			<div class="row">
@@ -62,6 +52,5 @@
 	<script src="{% static 'gallery/js/main.js' %}"></script>
 	{% endblock extrajs %}
 
-	{%endblock content %}
-	</body>
-</html>
+{%endblock content %}
+

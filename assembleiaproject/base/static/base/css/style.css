@@ -58,7 +58,17 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: sans-serif;
+    font-size: 1rem;
+
 }
+img,
+svg {
+  vertical-align: middle; }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
 
 .section-blue{
     background-color: #032872;
